@@ -29,6 +29,17 @@ public class test {
 		Register register = new Register();
 		register.setIndexR(0, "1111111111111111");
 		System.out.println(	register.getIndexR(0));
+		
+		Execute execute = new Execute("LDR 3,0,31");
+		System.out.println(execute.instructionTranslator());
+		String aaa= "LDR 3,0,31";
+		System.out.println(		aaa.substring(0,3));
+		String[] tokens = aaa.substring(4).split(",");
+		System.out.println(Integer.valueOf(tokens[0]));
+		System.out.println(tokens[1]);
+
+
+
 
 		
 	}

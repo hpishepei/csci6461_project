@@ -8,28 +8,51 @@ public class Execute {
 		this.insPseudo = aString;
 	}
 	
-	public void instructionTranslator(){
-		String op = insPseudo.substring(0,2);
-		switch (op) {
+	public String instructionTranslator(){
+		String op = insPseudo.substring(0,3);
+		switch (op.toUpperCase()) {
 		case "LDR":
-			this.LDRTranslator(insPseudo);
+			String binary = null;
+			String Opcode, R, IX, I, Address;
+			Opcode = "000001";
 			
-			break;
+			String[] tokens = insPseudo.substring(4).split(",");
+			
+			R = DataTypeConvertor.intToString(Integer.valueOf(tokens[0]));
+			IX = DataTypeConvertor.intToString(Integer.valueOf(tokens[1]));
+			I = DataTypeConvertor.intToString(Integer.valueOf(tokens[2]));
+			Address = "00000";
+			
+			binary = Opcode+R+IX+I+Address;
+			
+			return binary;
+			
 
 		default:
-			break;
+			return null;
 		}
 	}
 	
-	public String LDRTranslator(String aString){
-		String Pse = aString;
-		String Opcode, IX, R, I, Address;
-		Opcode = ins.substring(0,5);
+	/**
+	public String LDRTranslator(){
+		String binary;
+		String Opcode, R, IX, I, Address;
+		Opcode = "000001";
 		
+		String[] tokens = insPseudo.substring(3).split(",");
 		
-		return null;
+		R = DataTypeConvertor.intToString(Integer.valueOf(tokens[0]));
+		IX = DataTypeConvertor.intToString(Integer.valueOf(tokens[1]));
+		I = DataTypeConvertor.intToString(Integer.valueOf(tokens[2]));
+		Address = "00000";
+		
+		binary = Opcode+R+IX+I+Address;
+		
+		return binary;
+				
 	}
 	
+	*/
 	public String instructionTranslator(String ins){
 		return null;
 	}

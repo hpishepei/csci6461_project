@@ -6,7 +6,7 @@ public class DataTypeConvertor {
 		
 	}
 	
-	public int stringToInt(String s){
+	public static int stringToInt(String s){
 		int result=0;
 
 		for(int i=s.length()-1;i>=0;i--){
@@ -15,8 +15,8 @@ public class DataTypeConvertor {
 		return result;
 	}
 	
-	public int intToString(int i){
-		return Integer.valueOf(Integer.toBinaryString(i));
+	public static String intToString(int i){
+		return Integer.toBinaryString(i);
 
 	}
 }
