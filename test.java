@@ -1,7 +1,23 @@
 package csci6461_project;
 
 public class test {
+	
+	
+	
+	
 	public static void main(String args[]){
+		
+		Memory mem = new Memory(2048);
+		Register reg = new Register();
+		InstructionTranslator dec = new InstructionTranslator("LDR 3,0,31");
+		String a = dec.translator();
+		System.out.println(a.substring(0,6));
+		
+		
+	}
+	
+	
+		/**
 		String aString = "100";
 
 		System.out.println(aString.charAt(0)=='0');
@@ -30,17 +46,23 @@ public class test {
 		register.setIndexR(0, "1111111111111111");
 		System.out.println(	register.getIndexR(0));
 		
-		Execute execute = new Execute("LDR 3,0,31");
-		System.out.println(execute.instructionTranslator());
+		//Execute execute = new Execute("LDR 3    ,0,31");
+		//System.out.println(execute.instructionTranslator());
 		String aaa= "LDR 3,0,31";
-		System.out.println(		aaa.substring(0,3));
-		String[] tokens = aaa.substring(4).split(",");
-		System.out.println(Integer.valueOf(tokens[0]));
-		System.out.println(tokens[1]);
+		//System.out.println(		aaa.substring(0,3));
+		//String[] tokens = aaa.substring(4).split(",");
+		//System.out.println(Integer.valueOf(tokens[0]));
+		//System.out.println(tokens[1]);
+		//String[] aaaa;
+		//aaaa=tokens(aaa.substring(3), 3);
+		//for(String i:aaaa)
+			//System.out.println(i);
 
-
-
+		
+		
 
 		
 	}
+	*/
+
 }
